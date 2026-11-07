@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "CalmLens: Reading Comfort & Focus",
+  "version": "1.0.0",
+  "description": "Make any page easier on the eyes (fonts, spacing, tints, reading ruler) and keep YouTube free of Shorts and distracting recommendations.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "CalmLens",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}
